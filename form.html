@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="survay.css">
+    <style>
+        h1 {
+            text-align: center;
+            color: rgb(47, 0, 0);
+            font-size: 2rem;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        body {
+            background-image: url("https://thumbs.dreamstime.com/b/incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(44, 2, 2);
+            margin: 0;
+            padding: 0;
+        }
+
+        .survay {
+            background: rgba(104, 138, 206, 0.92);
+            max-width: 600px;
+            margin: 45px auto;
+            border-radius: 12px;
+            padding: 28px 32px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px 5px;
+            vertical-align: top;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: rgba(87, 83, 194, 0.897);
+            color: white;
+            padding: 8px 16px;
+            margin-top: 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: rgb(193, 187, 8);
+            color: black;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center;">SURVEY FORM</h1>
+    <div class="survay">
+        <form>
+            <table id="t1">
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" placeholder="Enter your name" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" placeholder="Enter your email" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="age" placeholder="Enter your age" min="1" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="file">Upload File:</label></td>
+                    <td><input type="file" id="file"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="role">Which option best describes your current role?</label></td>
+                    <td>
+                        <select id="role" required>
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="student">Student</option>
+                            <option value="employee">Employee</option>
+                            <option value="part-time">Part-time job</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>*Would you recommend this program?</label></td>
+                    <td>
+                        <input type="radio" id="definitely" name="recommend" value="definitely" required>
+                        <label for="definitely">Definitely</label><br>
+
+                        <input type="radio" id="maybe" name="recommend" value="maybe">
+                        <label for="maybe">Maybe</label><br>
+
+                        <input type="radio" id="notsure" name="recommend" value="notsure">
+                        <label for="notsure">Not sure</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="like">What would you like most here?</label></td>
+                    <td>
+                        <select id="like">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="projects">Projects</option>
+                            <option value="staffs">Staff</option>
+                            <option value="abcd">Abcd</option>
+                            <option value="efghi">Efghi</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Things that should be improved in the future:</label></td>
+                    <td>
+                        <input type="checkbox" id="front-end" value="front-end-projects">
+                        <label for="front-end">Front-end Projects</label><br>
+
+                        <input type="checkbox" id="back-end" value="back-end-projects">
+                        <label for="back-end">Back-end Projects</label><br>
+
+                        <input type="checkbox" id="data-vis" value="data-visualization">
+                        <label for="data-vis">Data Visualization</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="comments">Any Comments or Suggestions?</label></td>
+                    <td>
+                        <textarea id="comments" rows="5" cols="40" placeholder="Enter your comments here..."></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align:center;">
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
